@@ -91,7 +91,7 @@ export default function Homepage() {
     ];
 
     return(
-        <div className="mx-auto max-w-4xl w-full mt-10">
+        <div className="mx-auto max-w-4xl w-full mt-10 px-8">
             <div>
                 <h1 className="text-white text-3xl font-bold">Discover books you'll love</h1>
                 <p>Browse and search for your next favorite book</p>
@@ -99,7 +99,7 @@ export default function Homepage() {
             <div className="mt-8">
                 <Category categories={categories}/>
             </div>
-            <div className="grid grid-cols-4 gap-4 mt-5">
+            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
                 <BookCard books={books} />
             </div>
 
