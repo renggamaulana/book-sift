@@ -1,5 +1,6 @@
 import Category from "../components/Category";
 import BookCard from '../components/BookCard';
+import Sidebar from '../components/Sidebar';
 
 
 export default function Homepage() {
@@ -91,18 +92,24 @@ export default function Homepage() {
     ];
 
     return(
-        <div className="mx-auto max-w-4xl w-full mt-10 px-8">
+        <div className="flex gap-5 ">
             <div>
-                <h1 className="text-white text-3xl font-bold">Discover books you'll love</h1>
-                <p>Browse and search for your next favorite book</p>
+                <Sidebar />
             </div>
-            <div className="mt-8">
-                <Category categories={categories}/>
+            <div className="max-full w-full py-5 px-8 max-h-[80vh] overflow-auto">
+                <div>
+                    <h1 className="text-white text-3xl font-bold">Discover books you'll love</h1>
+                    <p>Browse and search for your next favorite book</p>
+                </div>
+                <div className="mt-8">
+                    <Category categories={categories}/>
+                </div>
+                <div className="grid grid-cols-2 lg:grid-cols-5 gap-4 mt-5">
+                    {books.map((book) =>
+                        <BookCard book={book} />
+                    )}
+                </div>
             </div>
-            <div className="grid grid-cols-2 lg:grid-cols-4 gap-4 mt-5">
-                <BookCard books={books} />
-            </div>
-
         </div>
     )
 }

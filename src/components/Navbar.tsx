@@ -3,7 +3,7 @@ import ButtonIcon from "./ButtonIcon";
 
 export default function Navbar() {
     return (
-        <nav className="flex justify-between items-center px-8 py-2 border-b border-b-gray-500">
+        <nav className="flex sticky w-full top-0 justify-between items-center px-8 py-2">
             <div className="flex gap-2">
                 <img src="/assets/logo.png" alt="logo" width={24}/>
                 <h1 className="text-2xl text-white font-semibold">Book Sift</h1>
